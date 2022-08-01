@@ -5,7 +5,7 @@ We implement our model and baselines based on a famous package of deep-learning-
 
 Partial work was done when Yang Zhang was an intern at [WeChat, Tencent](https://weixin.qq.com/).
 
-## Requirements
+## 1. Requirements
 + pytorch == 1.8
 + deepctr-torch == 0.2.7
 + ray
@@ -14,7 +14,7 @@ Partial work was done when Yang Zhang was an intern at [WeChat, Tencent](https:/
 + python >= 3.7
 
 
-## Parameters
+## 2. Parameters
 Key parameters:
 + --lr: learning rate.
 + --reg_emb: L2 regularization cofficient for user/item embeddings.
@@ -25,15 +25,15 @@ Key parameters:
 Note that, compared with baselines, our model has not additional hyper-parameters.
 
 
-## Reproduce Results
+## 3. Reproduce Results
 We provide two methods:
 
-### Simple Methods:
+### 3.1 Simple Methods:
 We have saved the best model of all models, including DCR-MoE and baseliens. We provide the following jupyter note to reproduce the results:
 ```
 best_kwai.ipynb
 ```
 The best models can be downloaded at here (https://rec.ustc.edu.cn)
 
-### Start from Scratch
+### 3.2 Start from Scratch
 
