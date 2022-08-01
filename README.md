@@ -13,6 +13,8 @@ Partial work was done when Yang Zhang was an intern at [WeChat, Tencent](https:/
 + Numpy
 + python >= 3.7
 
+We run codes on devices with NVIDIA GTX 3090 GPU or 2080Ti GPU.  
+
 
 ## 2. Parameters
 Key parameters:
