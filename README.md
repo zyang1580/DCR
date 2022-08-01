@@ -3,7 +3,7 @@ This is an implementation for our paper "Addressing Confounding Feature Issue fo
 
 We implement our model and baselines based on a famous package of deep-learning-based CTR models --- DeepCTR (torch version). And we take the renowned package ray[tune] to search hyper-parameters automatically.
 
-Partial work was completed when Yang Zhang was an intern at [WeChat, Tencent](https://weixin.qq.com/).
+Partial work was done when Yang Zhang was an intern at [WeChat, Tencent](https://weixin.qq.com/).
 
 ## Requirements
 + pytorch == 1.8
