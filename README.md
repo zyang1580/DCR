@@ -22,7 +22,7 @@ Key parameters:
 + --report_K: the referenced topk-N (N=report_K) recommendation for early stopping. Note than referenced metric is NDCG@N.
 + --stop_refer: the referenced metric for early stopping.
 
-Note that, compared with baselines, our model have not additional hyper-parameters.
+Note that, compared with baselines, our model has not additional hyper-parameters.
 
 
 ## Reproduce Results
