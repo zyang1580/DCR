@@ -29,7 +29,7 @@ Note that, compared with baselines, our model has not additional hyper-parameter
 We provide two methods:
 
 ### 3.1 Simple Methods:
-We have saved the best model of all models, including DCR-MoE and baseliens. We provide the following jupyter notebook file to reproduce the results:
+We have saved the best model of all models, including DCR-MoE and baselines. We provide the following jupyter notebook file to reproduce the results:
 ```
 best_kwai.ipynb
 ```
