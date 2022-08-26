@@ -1,5 +1,5 @@
 # DCR
-This is an implementation for our paper "Addressing Confounding Feature Issue for Causal Recommendation" based on PyTorch. 
+This is an implementation for our paper "Addressing Confounding Feature Issue for Causal Recommendation" (accepted by TOIS) based on PyTorch. 
 
 We implement our model and baselines based on a famous package of deep-learning-based CTR models --- DeepCTR (torch version). And we take the renowned package ray[tune] to search hyper-parameters automatically.
 
