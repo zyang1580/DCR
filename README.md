@@ -21,8 +21,8 @@ Key parameters:
 + --lr: learning rate.
 + --reg_emb: L2 regularization cofficient for user/item embeddings.
 + --reg_para: L2 regularization cofficient for other model parameters.
-+ --report_K: the referenced topk-N (N=report_K) recommendation for early stopping. Note than referenced metric is NDCG@N.
-+ --stop_refer: the referenced metric for early stopping.
++ --report_K: the referenced topk-N (N=report_K) recommendation for early stopping. Note than referenced metric is NDCG@N. (default:N=10)
++ --stop_refer: the referenced metric for early stopping. (need to set `val_ndcg_post10` for baselines and `val_do_ndcg_post10` for DCR-MoE)
 
 Note that, compared with baselines, our model has not additional hyper-parameters.
 
@@ -33,9 +33,47 @@ We provide two methods:
 ### 3.1 Simple Methods:
 We have saved the best model of all models, including DCR-MoE and baselines. We provide the following jupyter notebook file to reproduce the results:
 ```
+# for kwai
 best_kwai.ipynb
 ```
-The best models can be downloaded at here (https://rec.ustc.edu.cn)
+The best models and datsets can be downloaded at the [URL](https://rec.ustc.edu.cn/share/59a3e280-253c-11ed-aad3-51d42ffa3214). The instruction for downloading can be found at [data/README.md](data/README.md). 
 
 ### 3.2 Start from Scratch
++ If you use a new dataset, you need to:
+1. Preprocess your dataset with "prepare.py" then with "prepare_data2.py".
+2. Update the main_function_kwai.py for the new dataset, focusing on several variables:
+```
+post_action: testing label
+action: trainig: trainign label
+FEA_FEED_LIST: feature list (potential to be utilized)
+USE_FEAT: utilized features
+length_name: confounding feature
+code_length_name: coded confounding feature
+```
+
++ Then, to search for hyper-parameters, execute the code "searching_hyper_DCR_MOE_kwai.py". The search space is controlled by the following code in the file (different models need to search different hyper-parameters):
+```
+    config={
+        'lr':tune.grid_search([1e-3,1e-2]),
+        'reg_emb':tune.grid_search([[1e-1,1e-2,1e-3,1e-4,1e-5,1e-6,0]]), #
+        'reg_para':tune.grid_search([0,1e-1,1e-2,1e-3,1e-4,1e-5,1e-6]),
+        'model':tune.grid_search(['fastFairNFM']), # DCR-MoE
+        'alpha':tune.grid_search([0]), # not used for DCR-MoE
+        'stop_refer':tune.grid_search([refer_metrics])
+    }
+```
+  Please note that other hyper-parameters are controlled by the [`parameters class`](https://github.com/zyang1580/DCR/blob/3c8bbbcd4508366efd5590289253669b2eba2eac/main_function_kwai.py#L49) in "main_function_kwai.py".
+
+
+  Meanwhile, you can control the hyper-parameter `model` to select the DCE-MoE or baselines. 
+  ```
+  model = fastFairNFM: DCR-MoE
+  model = MyNFM (or NFM) and used_codelen=0: NFM-WOA
+  model = MyNFM (or NFM) and used_codelen=1 (defined in the above *parameters class*): NFM-WA
+  model = ipw: IPW
+  model = FairGo : FairGo
+  model = CR_NFM: CR
+  ```
+
+
 
