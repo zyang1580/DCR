@@ -37,7 +37,7 @@ We have saved the best model of all models, including DCR-MoE and baselines. We 
 # for kwai
 best_kwai.ipynb
 ```
-The best models and datsets can be downloaded at the [URL](https://rec.ustc.edu.cn/share/59a3e280-253c-11ed-aad3-51d42ffa3214). The instruction for downloading can be found at [data/README.md](data/README.md). 
+The best models and datsets can be downloaded at this [URL](https://rec.ustc.edu.cn/share/59a3e280-253c-11ed-aad3-51d42ffa3214). The instruction for downloading can be found at [data/README.md](data/README.md). 
 
 ***NOTE: the file name of the best models records the corresponding best hyper-parameters.
 
