@@ -43,7 +43,7 @@ The best models and datsets can be downloaded at this [URL](https://rec.ustc.edu
 
 ### 3.2 Start from Scratch
 + If you use a new dataset, you need to:
-1. Preprocess your dataset with "prepare.py" then with "prepare_data2.py".
+1. Preprocess your dataset, referring to the file "prepare.py" and the file "prepare_data2.py".
 2. Update the main_function_kwai.py for the new dataset, focusing on several variables:
 ```
 post_action: testing label
