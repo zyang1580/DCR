@@ -5,6 +5,7 @@ We implement our model and baselines based on a famous package of deep-learning-
 
 Partial work was done when Yang Zhang was an intern at [WeChat, Tencent](https://weixin.qq.com/).
 
+
 ## 1. Requirements
 + pytorch == 1.8
 + deepctr-torch == 0.2.7
@@ -37,6 +38,8 @@ We have saved the best model of all models, including DCR-MoE and baselines. We 
 best_kwai.ipynb
 ```
 The best models and datsets can be downloaded at the [URL](https://rec.ustc.edu.cn/share/59a3e280-253c-11ed-aad3-51d42ffa3214). The instruction for downloading can be found at [data/README.md](data/README.md). 
+
+***NOTE: the file name of the best models records the corresponding best hyper-parameters.
 
 ### 3.2 Start from Scratch
 + If you use a new dataset, you need to:
