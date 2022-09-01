@@ -79,7 +79,27 @@ code_length_name: coded confounding feature
   ```
 ## 4. Citation
 
+ACM ref:
+
 >Xiangnan He, Yang Zhang, Fuli Feng, Chonggang Song, Lingling Yi, Guohui Ling, and Yongdong Zhang. 2022. Addressing Confounding Feature Issue for Causal Recommendation. ACM Trans. Inf. Syst. Just Accepted (July 2022). https://doi.org/10.1145/3559757
+
+bibtex:
+
+```
+@article{DCR,
+author = {He, Xiangnan and Zhang, Yang and Feng, Fuli and Song, Chonggang and Yi, Lingling and Ling, Guohui and Zhang, Yongdong},
+title = {Addressing Confounding Feature Issue for Causal Recommendation},
+year = {2022},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+issn = {1046-8188},
+url = {https://doi.org/10.1145/3559757},
+doi = {10.1145/3559757},
+note = {Just Accepted},
+journal = {ACM Trans. Inf. Syst.},
+month = {jul}
+}
+```
 
 
 
