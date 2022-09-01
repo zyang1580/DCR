@@ -77,6 +77,9 @@ code_length_name: coded confounding feature
   model = FairGo : FairGo
   model = CR_NFM: CR
   ```
+## 4. Citation
+
+>Xiangnan He, Yang Zhang, Fuli Feng, Chonggang Song, Lingling Yi, Guohui Ling, and Yongdong Zhang. 2022. Addressing Confounding Feature Issue for Causal Recommendation. ACM Trans. Inf. Syst. Just Accepted (July 2022). https://doi.org/10.1145/3559757
 
 
 
