@@ -6,6 +6,7 @@ you need install it with pip
 from operator import pos
 from re import A, S
 import os
+import sys
 from typing import Dict
 from deepctr_torch.layers.interaction import BiInteractionPooling
 import numpy as np
